@@ -1,13 +1,20 @@
 import './App.css'
 import LuckyN from "./LuckyN";
+import {sum} from "./utils.js";
 
+function isSeven(dice){
+  return sum(dice) === 7;
+}
+
+function allSameValue(dice){
+  return dice.every((v)=>v === dice[0]);
+}
 
 function App() {
-  
-
   return (
     <>
-      <LuckyN></LuckyN>
+      <LuckyN winCheck={isSeven} title="Lucky7"></LuckyN>
+      <LuckyN winCheck={allSameValue} title="All Same Values"></LuckyN>
       
     </>
   )
@@ -32,7 +39,7 @@ Heirarchy of components: App -> LuckyN -> Dice -> Die
 
 /*
 logic component -> LuckyN component, where we will determine the winner and use logic to do so
-dumb/only ui coomponents - > Dice and Die - > only concerned with UI and no LOGIC
+presentation/dumb/only ui coomponents - > Dice and Die - > only concerned with UI and no LOGIC
 */
                                               
 
