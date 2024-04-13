@@ -1,5 +1,5 @@
 /* Gets random integer: [1..6]. */
-
+// 6 because: 6 sided dice
 function d6() {
   return Math.floor(Math.random() * 6) + 1;
 }

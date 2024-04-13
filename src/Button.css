@@ -1,8 +1,13 @@
-/* .LuckyN button{
+.Button{
   background-color: rgb(120, 170, 239);
   border-radius: 5px;
   color:wheat;
   height:40px;
   width:100px;
   cursor: pointer;
-} */
+  transition: opacity 0.2s;
+}
+
+.Button:hover{
+  opacity: 0.7;
+}

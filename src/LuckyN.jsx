@@ -3,6 +3,7 @@ import {getRolls} from "./utils.js";
 import {sum} from "./utils.js";
 import Dice from "./Dice";
 import  "./LuckyN.css";
+import Button from "./Button";
 
 export default function LuckyN({title="Dice Game",numDice=2,winCheck}){ // numDice=2 means that we have to create 2 Die components ,means dice array=[5,4] length=2, only 2 elements
 
@@ -18,7 +19,8 @@ export default function LuckyN({title="Dice Game",numDice=2,winCheck}){ // numDi
       <h1>{title} {isWinner && "Winner"}</h1>
       <Dice dice={dice}></Dice>
       <br />
-      <button onClick={re_roll}>Re-Roll Dice</button>
+      {/* <button onClick={re_roll}>Re-Roll Dice</button> */}
+      <Button clickFunc={re_roll} label="Re-Roll"></Button>
     </div>
   )
 }
